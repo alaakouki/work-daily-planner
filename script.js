@@ -31,21 +31,75 @@ currentDay.text( dayjs().format('dddd, DD MMM YYYY'));
 
 
 
+// var dayHours = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24];
+
+// for (var x = 0; x < dayHours.length; x++) {
+//   var xEquals = dayjs().hour(x);
+//   // console.log(xEquals);
+  
+//   // if () {
+  
+//   // }
+//   };
+
+
+
+
+
+
+// I used for loop here to avoid multiple declaration of hover function it doesnt work how can i declare my div id my div id was 1-7.plz tell me how i should use the div ids inside the loop.
+
+// $(document).ready(function()
+// {
+//     for(var i = 1; i < 8; i++)//see that I removed the $ preceeding the `for` keyword, it should not have been there
+//     {
+//         $("#"+i).hover(function() {
+//              $(this).stop().animate({left:"50px"});//also notice that instead of using `"#" + i` as the selector inside the anonymous function I changed it to `this` so it properly references the hovered element
+//         },
+//         function() {
+//              $(this).stop().animate({left:"30px"});
+//         });
+//     } 
+// });
+
+
+
+var currentHour = dayjs().get('hour');
+console.log(currentHour);
+
+$(document).ready(function() {
+  for (var i = 9; i < 25; i++) {
+    if ( currentHour < i ) {
+      $("#hour-"+i).addClass('future');
+    } else if ( currentHour === i ) {
+      $("#hour-"+i).addClass('present');
+    } else {
+      $("#hour-"+i).addClass('past');
+    }
+  }
+});
+
+
+// titleEl.addClass('p-5');
+
+
+
+
 // // // // // // // var whatIs = dayjs().get('hour');
 // // // // // // // console.log(whatIs);
 
 
-var dayHours = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24];
 
 
-for (var x = 0; x < dayHours.length; x++) {
-var xEquals = dayjs().hour(x);
-// console.log(xEquals);
 
-// if () {
+// for (var x = 0; x < dayHours.length; x++) {
+// var xEquals = dayjs().hour(x);
+// // console.log(xEquals);
 
-// }
-};
+// // if () {
+
+// // }
+// };
 
 
 // ===================================================
