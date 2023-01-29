@@ -23,13 +23,16 @@ $(function () {
 });
 
 
-
+// this to show current day at header
 var currentDay = $('#currentDay');
 currentDay.text( dayjs().format('dddd, DD MMM YYYY'));
 
 
 
-// ===================================================
+
+
+// // // // // // // var whatIs = dayjs().get('hour');
+// // // // // // // console.log(whatIs);
 
 
 var dayHours = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24];
@@ -44,6 +47,12 @@ var xEquals = dayjs().hour(x);
 // }
 };
 
+
+// ===================================================
+
+
+
+
 // var hour = today.getHours();
 // var minute= today.getMinutes();
 // var second = today.getSeconds();
@@ -51,8 +60,7 @@ var xEquals = dayjs().hour(x);
 // var prepand = ( hour >= 12) ? " PM" : " AM";
 // hour = (hour >= 12) ? hour - 12 : hour;
 
-// // // // // // // var whatIs = dayjs().get('hour');
-// // // // // // // console.log(whatIs);
+
 
 
 // // it worked as our date & time
