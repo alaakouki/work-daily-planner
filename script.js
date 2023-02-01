@@ -39,7 +39,7 @@ $(function () {
   
 
   for (var i = 9; i < 25; i++) {
-    console.log($("#hour-"+i + ' .description'));
+    // console.log($("#hour-"+i + ' .description'));
     $("#hour-"+i + ' .description').val(localStorage.getItem("hour-"+i));
     };
 
